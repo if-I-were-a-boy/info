@@ -12,11 +12,11 @@ $url="https://www.nowcoder.com/search?type=post&query=%E5%86%85%E6%8E%A8";
 
 //编写采集规则
 $rules = array(
-    'text' => array('.clearfix,li','html'),
+    'text' => array('discuss-detail','html'),
 );
 
 //列表选择器
-$rang = '.terminal-feed.discussion-feed.hot-discuss';
+$rang = '.module-body';
 
 //开始采集
 $data = QueryList::Query($url,$rules,$rang)->data;
