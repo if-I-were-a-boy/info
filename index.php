@@ -19,7 +19,7 @@ $rules = array(
 $rang = '.module-body>li';
 
 //开始采集
-$data = QueryList::Query($url,$rules,$rang,'curl');
+$data = QueryList::Query($url,$rules,$rang);
 
 echo $data->getJSON();
 
