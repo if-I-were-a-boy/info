@@ -13,7 +13,6 @@ $url="https://www.nowcoder.com/search?type=post&query=%E5%86%85%E6%8E%A8";
 //编写采集规则
 $rules = array(
     'text' => array('.discuss-main.clearfix','text'),
-    ''=> array('.feed-tip'),
 );
 
 //列表选择器
