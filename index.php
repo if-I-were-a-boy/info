@@ -12,16 +12,16 @@ $url="https://www.nowcoder.com/search?type=post&query=%E5%86%85%E6%8E%A8";
 
 //编写采集规则
 $rules = array(
-    'title' => array('.discuss-main>a','href')
+    'link' => array('.two>a','href'),
 );
 
 //列表选择器
-$rang = '.module-body>li';
+//$rang = '.module-body>li';
 
 //开始采集
-$data = QueryList::Query($url,$rules,$rang);
+$data = QueryList::Query($url,$rules)->data;
 
-var_dump($data);
+print_r($data);
 
 
 //$hj = QueryList::Query('http://mobile.csdn.net/',array("url"=>array('.unit h1 a','href')));
