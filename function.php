@@ -1,4 +1,8 @@
 <?php
+require_once './spider/phpQuery/phpQuery.php';
+require_once './spider/QueryList/QueryList.php';
+use QL\QueryList;
+
 function searchInfo($page, $rules, $rang){
     //获取所有的HTML
     $url="https://www.nowcoder.com/search?type=post&order=time&query=%E5%86%85%E6%8E%A8&page=".$page;

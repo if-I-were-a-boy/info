@@ -3,10 +3,7 @@
  * 过程:设置HTML=>设置采集规则=>执行采集=>获取采集结果数据
  */
 namespace app\index\controller;
-use QL\QueryList;
-require './spider/phpQuery/phpQuery.php';
-require './spider/QueryList/QueryList.php';
-require  './function.php';
+require_once  './function.php';
 header("Content-type:text/html;charset=utf-8");
 
 $rules = array(
