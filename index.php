@@ -21,7 +21,7 @@ $rang = '.module-body>li';
 //开始采集
 $data = QueryList::Query($url,$rules,$rang);
 
-echo $data->getJSON();
+var_dump($data);
 
 
 //$hj = QueryList::Query('http://mobile.csdn.net/',array("url"=>array('.unit h1 a','href')));
