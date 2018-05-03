@@ -7,28 +7,67 @@ require './spider/phpQuery/phpQuery.php';
 require './spider/QueryList/QueryList.php';
 use QL\QueryList;
 header("Content-type:text/html;charset=utf-8");
-//获取所有的HTML
-$url="https://www.nowcoder.com/search?type=post&query=%E5%86%85%E6%8E%A8";
+function searchInfo($page, $rules, $rang){
+    //获取所有的HTML
+    $url="https://www.nowcoder.com/search?type=post&order=time&query=%E5%86%85%E6%8E%A8&page=".$page;
+    //编写采集规则
+    $rules = $rules;
+    //列表选择器
+    $rang = $rang;
+    //开始采集
+    $data = QueryList::Query($url,$rules,$rang)->data;
 
-//编写采集规则
+    return $data[0]['text'];
+}
+
+function cutInfo($html){
+    $regex="/<div class=\"discuss-main clearfix\".*?>.*?<\/div>/ism";
+    if(preg_match_all($regex, $html, $matches)){
+        print_r($matches);
+    }else{
+        echo '0';
+    }
+    return ;
+}
+
+function getTitle(){
+
+}
+
+function getTime(){
+
+}
+
+function getName(){
+
+}
+
+
+
+
+function filterInfo($html){
+
+}
+
+
 $rules = array(
     'text' => array('.discuss-detail','html'),
 );
 
-//列表选择器
 $rang = '.module-body';
 
-//开始采集
-$data = QueryList::Query($url,$rules,$rang)->data;
+for($i=0;$i<=250;$i++) {
+    $html = searchInfo($i,$rules, $rang);
+    $info = cutInfo($html);
+    foreach ($info as $value) {
+        $name  = getName($value);
+        $time = getTime($value);
+        $url = getUrl($value);
 
-print_r($data);
+    }
 
+}
 
-//$hj = QueryList::Query('http://mobile.csdn.net/',array("url"=>array('.unit h1 a','href')));
-//$data = $hj->getData(function($x){
-//    return $x['url'];
-//});
-//print_r($data);
 
 
 
