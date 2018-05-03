@@ -15,12 +15,12 @@ $url="https://www.nowcoder.com/search?type=post&query=%E5%86%85%E6%8E%A8";
 
 //编写采集规则
 $rules = array(
- 'title' => ['.discuss-main clearfix','href'],
+ 'title' => array('.discuss-main clearfix','href')
 );
 //列表选择器
 $rang = '.module-body>li';
 //开始采集
-$data = QueryList::Query($url,$rules,$rang)->data;
-echo "haha";var_dump($data);
+$data = QueryList::Query($url,$rules,$rang,'curl');
+echo $data->getJSON();
 ?>
 
