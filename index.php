@@ -21,6 +21,6 @@ $rules = array(
 $rang = '.module-body>li';
 //开始采集
 $data = QueryList::Query($url,$rules,$rang)->data;
-var_dump($data);
+echo "haha";var_dump($data);
 ?>
 
