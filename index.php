@@ -6,6 +6,7 @@ namespace app\index\controller;
 require_once  './function.php';
 header("Content-type:text/html;charset=utf-8");
 
+
 $rules = array(
     'text' => array('.discuss-detail','html'),
 );
@@ -16,6 +17,7 @@ $html = searchInfo(0,$rules, $rang);
 
 $info = cutInfo($html);
 
+var_dump($info);
 //for($i=0;$i<=250;$i++) {
 //    $html = searchInfo($i,$rules, $rang);
 //    $info = cutInfo($html);

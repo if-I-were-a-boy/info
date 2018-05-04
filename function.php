@@ -17,12 +17,14 @@ function searchInfo($page, $rules, $rang){
 }
 
 function cutInfo($html){
-    $regex="/<div class=\"discuss-main clearfix\".*?>.*?<\/div>/ism";
-    if(preg_match_all($regex, $html, $matches)){
-        print_r($matches);
-    }else{
-        echo '0';
-    }
+    $regex1="/<div class=\"discuss-main clearfix\".*?>.*?<\/div>/ism";
+    $regex2 = "/<p class=\"feed-tip\".*?>.*?<\/p>/ism";
+
+    preg_match_all($regex1, $html, $matche1);
+    preg_match_all($regex2, $html, $matche2);
+
+    $matches = array('par_o' => $matche1, 'par_t' => $matche2);
+
     return $matches;
 }
 
