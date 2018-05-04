@@ -77,8 +77,8 @@ function getTime($str){
 //    return ;
 //}
 
-function getType($str){
-
-    return ;
-}
+//function getType($str){
+//
+//    return ;
+//}
 
