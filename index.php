@@ -12,19 +12,19 @@ $rules = array(
 );
 
 $rang = '.module-body';
-
+$allInfo = [];
 for($i=0;$i<=0;$i++) {
     $html = searchInfo($i,$rules, $rang);
     $info = cutInfo($html);
-    foreach ($info['par_o'] as $key => $value) {
-
-       $perInfo =  getDetail($info['par_o'][$key], $info['par_t'][$key]);
-        echo "4----";
-       var_dump($perInfo);
-    }
+ foreach ($info['par_o'][0] as $key => $value) {
+       $perInfo =  getDetail($info['par_o'][0][$key], $info['par_t'][0][$key]);
+       if(isset($perInfo["type"]) && $perInfo["type"]){
+             $allInfo[] = $perInfo; 
+       }    
+     
+     }
 
 }
-
 
 
 

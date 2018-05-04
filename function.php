@@ -40,34 +40,28 @@ function getDetail($html_o, $html_t){
     $data = QueryList::Query($html_o,$rules)->data;
     $title = $data[0]['title'];
     $link = $data[0]['link'];
-    echo "1----";
-    var_dump($data);
 
     //获取time和type
     $rules = array(
-        'type'  => array('a:even', 'text'),
+        'type'  => array('a:odd', 'text'),
         'time'  => array('.feed-tip', 'text')
     );
 
     //开始采集
     $data = QueryList::Query($html_t,$rules)->data;
-    echo "2----";
-    var_dump($data);
     $type  = ($data[0]['type'] == '[招聘信息]') ? 1 : 0;
     $time =  getTime($data[0]['time']);
-    echo "3----";
-    var_dump($time);
     $info = ['title' => $title, 'link' => $link, 'type' => $type, 'time' => $time];
     return $info;
 }
 
 function getTime($str){
 
-    preg_match_all("/d{4}-d{2}-d{2}/", $str, $s1);
+    preg_match("/\d{4}-\d{2}-\d{2}/", $str, $s1);
 
-    preg_match_all("/d{2}:d{2}:d{2}/", $str, $s2);
+    preg_match("/\d{2}:\d{2}:\d{2}/", $str, $s2);
 
-    $s = $s1||$s2;
+    $s = empty($s1[0]) ? $s2[0] : $s1[0];
 
     return $s;
 }
