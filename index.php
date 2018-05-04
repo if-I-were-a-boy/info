@@ -6,6 +6,7 @@ namespace app\index\controller;
 require_once  './function.php';
 header("Content-type:text/html;charset=utf-8");
 
+ini_set('date.timezone','Asia/Shanghai');
 
 $rules = array(
     'text' => array('.discuss-detail','html'),
@@ -13,7 +14,8 @@ $rules = array(
 
 $rang = '.module-body';
 $allInfo = [];
-for($i=0;$i<=0;$i++) {
+
+for($i=0;$i<=250;$i++) {
     $html = searchInfo($i,$rules, $rang);
     $info = cutInfo($html);
  foreach ($info['par_o'][0] as $key => $value) {

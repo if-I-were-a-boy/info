@@ -3,6 +3,8 @@ require_once './spider/phpQuery/phpQuery.php';
 require_once './spider/QueryList/QueryList.php';
 use QL\QueryList;
 
+ini_set('date.timezone','Asia/Shanghai');
+
 function searchInfo($page, $rules, $rang){
     //获取所有的HTML
     $url="https://www.nowcoder.com/search?type=post&order=time&query=%E5%86%85%E6%8E%A8&page=".$page;
@@ -61,7 +63,13 @@ function getTime($str){
 
     preg_match("/\d{2}:\d{2}:\d{2}/", $str, $s2);
 
-    $s = empty($s1[0]) ? $s2[0] : $s1[0];
+    $nowdate = date("Y-m-d");
+
+    if(empty($s1[0])) {
+        $s = ['time' => $s2[0], 'date' => $nowdate];
+    }else{
+        $s = ['time' => "00:00:00", 'date' => $s1[0]];
+    }
 
     return $s;
 }
