@@ -13,22 +13,17 @@ $rules = array(
 
 $rang = '.module-body';
 
-$html = searchInfo(0,$rules, $rang);
+for($i=0;$i<=0;$i++) {
+    $html = searchInfo($i,$rules, $rang);
+    $info = cutInfo($html);
+    foreach ($info['par_o'] as $key => $value) {
 
-$info = cutInfo($html);
+       $perInfo =  getDetail($info['par_o'][$key], $info['par_t'][$key]);
+        echo "4----";
+       var_dump($perInfo);
+    }
 
-var_dump($info);
-//for($i=0;$i<=250;$i++) {
-//    $html = searchInfo($i,$rules, $rang);
-//    $info = cutInfo($html);
-//    foreach ($info as $value) {
-//        $name  = getName($value);
-//        $time = getTime($value);
-//        $url = getUrl($value);
-//
-//    }
-//
-//}
+}
 
 
 
