@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00e10696-033a-4640-a502-9b32d6624401" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/opRedis.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/function.php" beforeDir="false" afterPath="$PROJECT_DIR$/function.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
@@ -21,26 +22,26 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="8" selection-start-line="8" selection-end-line="9" selection-end-column="21" />
+            <state relative-caret-position="105">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="function.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="opRedis.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/opRedis.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="function.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/function.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="66" column="24" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QueryList.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spider/QueryList/QueryList.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="50" column="1" lean-forward="true" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
+            <state relative-caret-position="100">
+              <caret line="70" column="54" lean-forward="true" selection-start-line="70" selection-start-column="54" selection-end-line="70" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -50,6 +51,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>Query</find>
+      <find>$nowdate</find>
       <find>getDetail</find>
     </findStrings>
   </component>
@@ -59,8 +61,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/function.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/opRedis.php" />
       </list>
     </option>
   </component>
@@ -73,8 +76,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="10" />
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="725" />
@@ -90,11 +92,6 @@
             <path>
               <item name="info" type="b2602c69:ProjectViewProjectNode" />
               <item name="info" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="info" type="b2602c69:ProjectViewProjectNode" />
-              <item name="info" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="spider" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -133,12 +130,12 @@
       <updated>1525330832483</updated>
       <workItem from="1525330833914" duration="1918000" />
       <workItem from="1525332787420" duration="10935000" />
-      <workItem from="1525415265352" duration="2069000" />
+      <workItem from="1525415265352" duration="6244000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14922000" />
+    <option name="totallyTimeSpent" value="19097000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -150,10 +147,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="725" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1280" height="725" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25767368" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25767368" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32961783" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -162,7 +158,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32961783" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32961783" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32961783" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -284,22 +280,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spider/QueryList/QueryList.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
+        <state relative-caret-position="-4570">
           <caret line="50" column="1" lean-forward="true" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" selection-start-line="8" selection-end-line="9" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/function.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="66" column="24" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
+        <state relative-caret-position="100">
+          <caret line="70" column="54" lean-forward="true" selection-start-line="70" selection-start-column="54" selection-end-line="70" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/opRedis.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opRedis.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
         </state>
       </provider>
     </entry>

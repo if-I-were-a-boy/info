@@ -8,26 +8,40 @@ header("Content-type:text/html;charset=utf-8");
 
 ini_set('date.timezone','Asia/Shanghai');
 
-$rules = array(
-    'text' => array('.discuss-detail','html'),
-);
+function showMessg(){
 
-$rang = '.module-body';
-$allInfo = [];
+    $rules = array(
+        'text' => array('.discuss-detail','html'),
+    );
 
-for($i=0;$i<=250;$i++) {
-    $html = searchInfo($i,$rules, $rang);
-    $info = cutInfo($html);
- foreach ($info['par_o'][0] as $key => $value) {
-       $perInfo =  getDetail($info['par_o'][0][$key], $info['par_t'][0][$key]);
-       if(isset($perInfo["type"]) && $perInfo["type"]){
-             $allInfo[] = $perInfo; 
-       }    
-     
-     }
+    $rang = '.module-body';
+    $allInfo = [];
+    $flag = false;
 
+    for($i=0;$i<=250;$i++) {
+        //爬取符合条件的html
+        if($flag){
+            break;
+        }
+        $html = searchInfo($i,$rules, $rang);
+        $info = cutInfo($html);
+        foreach ($info['par_o'][0] as $key => $value) {
+            $perInfo =  getDetail($info['par_o'][0][$key], $info['par_t'][0][$key]);
+            if($perInfo['enable']['date'] > xx) {
+                $flag = true;
+                break;
+            }
+            if(isset($perInfo["type"]) && $perInfo["type"]){
+                $allInfo[] = $perInfo;
+            }
+        }
+    }
+
+    return $allInfo;
 }
 
+
+showMessg();
 
 
 
