@@ -23,6 +23,7 @@ function showMessg(){
         if($flag){
             break;
         }
+        if($i>0) {break;}
         $html = searchInfo($i,$rules, $rang);
         $info = cutInfo($html);
         foreach ($info['par_o'][0] as $key => $value) {
@@ -40,8 +41,8 @@ function showMessg(){
     return $allInfo;
 }
 
-
-showMessg();
+echo "hello";
+//showMessg();
 
 
 

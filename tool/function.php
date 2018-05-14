@@ -1,5 +1,5 @@
 <?php
-require_once "../../index.php";
+require_once "./../index.php";
 require_once SPIDER.'phpQuery/phpQuery.php';
 require_once SPIDER.'QueryList/QueryList.php';
 use QL\QueryList;
