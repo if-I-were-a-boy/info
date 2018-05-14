@@ -2,7 +2,7 @@
 /**
  * 过程:设置HTML=>设置采集规则=>执行采集=>获取采集结果数据
  */
-require_once "/index.php";
+require_once "../../index.php";
 require_once TOOL.'function.php';
 header("Content-type:text/html;charset=utf-8");
 
