@@ -2,9 +2,8 @@
 /**
  * 过程:设置HTML=>设置采集规则=>执行采集=>获取采集结果数据
  */
-namespace app\index\controller;
 require_once "/index.php";
-require_once '/info/function.php';
+require_once TOOL.'function.php';
 header("Content-type:text/html;charset=utf-8");
 
 ini_set('date.timezone','Asia/Shanghai');
