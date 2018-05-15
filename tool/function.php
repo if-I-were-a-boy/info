@@ -54,7 +54,7 @@ function getDetail($html_o, $html_t){
     $data = QueryList::Query($html_t,$rules)->data;
     $type  = ($data[0]['type'] == '[招聘信息]') ? 1 : 0;
     $time =  getTime($data[0]['time']);
-    $info = ['title' => $title, 'link' => $link, 'type' => $type, 'time' => $time['time'], 'date'=> $time['date']];
+    $info = ['title' => $title, 'link' => $link, 'type' => $type, 'time' => $time['time'], 'date'=> $time['date'], 'time_stamp'=>$time['time_stamp']];
     return $info;
 }
 
@@ -67,21 +67,15 @@ function getTime($str){
     $nowdate = date("Y-m-d");
 
     if(empty($s1[0])) {
-        $s = ['time' => $s2[0], 'date' => $nowdate];
+        $str = $nowdate." ".$s2[0];
+        $timeStamp = strtotime($str);
+        $s = ['time' => $s2[0], 'date' => $nowdate, 'time_stamp' => $timeStamp];
+
     }else{
-        $s = ['time' => "00:00:00", 'date' => $s1[0]];
+        $str = $s1[0]." 00:00:00";
+        $timeStamp = strtotime($str);
+        $s = ['time' => "00:00:00", 'date' => $s1[0], 'time_stamp' => $timeStamp];
     }
 
     return $s;
 }
-
-//function getName(){
-//
-//    return ;
-//}
-
-//function getType($str){
-//
-//    return ;
-//}
-

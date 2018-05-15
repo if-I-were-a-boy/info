@@ -1,5 +1,13 @@
-<?php
-  $s = " -褚轰-   今天 14:26:05   发表在 [招聘信息]   最后回复  1分钟前";
-
-preg_match('/\d{2}:\d{2}:\d{2}/', $s, $matches);
-var_dump($matches);
+/**
+ * 内推信息表
+ */
+CREATE TABLE pushInfo (
+     `id` INT UNSIGNED not null AUTO_INCREMENT COMMENT '主键',
+     `title` varchar(100) not null COMMENT '帖子的标题',
+     `time`  int not null COMMENT '时间戳',
+     `date`  char(10) not null COMMENT '日期',
+     `detail` varchar(50) not null COMMENT '帖子的详细信息',
+     `enable` tinyint not null COMMENT '其他',
+     `expire` int not null COMMENT '过期的时间',
+     primary key (id)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='内推信息表';
