@@ -44,7 +44,13 @@ for($i=3;$i>=1;$i--) {
     $sumInfo[] = array_reverse($allInfo);
 
 }
-var_dump($sumInfo);
+ foreach ($sumInfo as $key => $value) {
+    foreach ($value as $k => $v ){
+        $temp = $v['time_stamp'] + 20*24*60*60;
+        $sql = 'insert into pushInfo(title,`time`,`date`, detail, enable, expire) values("'.$v['title'].'","'.$v['time_stamp'].'","'.$v['date'].'","'.$v['link'].'","'.$temp.'")';
+        var_dump($sql);
+    }
+ }
 
 
 
