@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="00e10696-033a-4640-a502-9b32d6624401" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/controller/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tool/function.php" beforeDir="false" afterPath="$PROJECT_DIR$/tool/function.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,8 +19,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controller/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
+            <state relative-caret-position="105">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -69,8 +68,7 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-12" />
-    <option name="y" value="23" />
+    <option name="y" value="38" />
     <option name="width" value="1280" />
     <option name="height" value="725" />
   </component>
@@ -135,12 +133,12 @@
       <workItem from="1525330833914" duration="1918000" />
       <workItem from="1525332787420" duration="10935000" />
       <workItem from="1525415265352" duration="6244000" />
-      <workItem from="1526009486986" duration="19002000" />
+      <workItem from="1526009486986" duration="19990000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38099000" />
+    <option name="totallyTimeSpent" value="39087000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -152,7 +150,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-12" y="23" width="1280" height="725" extended-state="0" />
+    <frame x="0" y="38" width="1280" height="725" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32961783" />
@@ -160,8 +158,8 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32961783" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.4410828" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30613893" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.4410828" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30613893" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -364,8 +362,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>

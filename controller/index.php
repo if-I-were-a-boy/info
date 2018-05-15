@@ -18,20 +18,19 @@ function showMessg(){
     $allInfo = [];
     $flag = false;
 
-    for($i=0;$i<=250;$i++) {
+    for($i=0;$i<=0;$i++) {
         //爬取符合条件的html
         if($flag){
             break;
         }
-        if($i>0) {break;}
         $html = searchInfo($i,$rules, $rang);
         $info = cutInfo($html);
         foreach ($info['par_o'][0] as $key => $value) {
             $perInfo =  getDetail($info['par_o'][0][$key], $info['par_t'][0][$key]);
-            if($perInfo['enable']['date'] > xx) {
-                $flag = true;
-                break;
-            }
+//            if($perInfo['enable']['date'] > xx) {
+//                $flag = true;
+//                break;
+//            }
             if(isset($perInfo["type"]) && $perInfo["type"]){
                 $allInfo[] = $perInfo;
             }
@@ -41,8 +40,8 @@ function showMessg(){
     return $allInfo;
 }
 
-echo "hello";
-//showMessg();
+
+showMessg();
 
 
 
