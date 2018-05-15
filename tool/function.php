@@ -54,7 +54,7 @@ function getDetail($html_o, $html_t){
     $data = QueryList::Query($html_t,$rules)->data;
     $type  = ($data[0]['type'] == '[招聘信息]') ? 1 : 0;
     $time =  getTime($data[0]['time']);
-    $info = ['title' => $title, 'link' => $link, 'type' => $type, 'time' => $time['time'], 'data'=> $time['data']];
+    $info = ['title' => $title, 'link' => $link, 'type' => $type, 'time' => $time['time'], 'date'=> $time['date']];
     return $info;
 }
 
