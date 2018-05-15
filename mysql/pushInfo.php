@@ -27,14 +27,12 @@ $sumInfo = [];
 for($i=3;$i>=1;$i--) {
     //爬取符合条件的html
     $allInfo = [];
-    if($flag){
-        break;
-    }
+    $flag = false;
     $html = searchInfo($i,$rules, $rang);
     $info = cutInfo($html);
     foreach ($info['par_o'][0] as $key => $value) {
         $perInfo =  getDetail($info['par_o'][0][$key], $info['par_t'][0][$key]);
-            if($perInfo['enable']['date'] < "2018-05-01 ") {
+            if($perInfo['date'] < "2018-05-01 ") {
                 $flag = true;
                 break;
             }
@@ -43,10 +41,9 @@ for($i=3;$i>=1;$i--) {
         }
     }
 
-    $sumInfo[] = $allInfo;
+    $sumInfo[] = array_reverse($allInfo);
 
 }
-
 var_dump($sumInfo);
 
 
