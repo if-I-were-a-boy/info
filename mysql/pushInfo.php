@@ -47,8 +47,14 @@ for($i=3;$i>=1;$i--) {
  foreach ($sumInfo as $key => $value) {
     foreach ($value as $k => $v ){
         try{$temp = $v['time_stamp'] + 20*24*60*60;
-            $sql = 'insert into pushInfo(title,`time`,`date`, detail, enable, expire) values("'.$v['title'].'","'.$v['time_stamp'].'","'.$v['date'].'","'.$v['link'].'","'.$temp.'")';
+ $dbn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+$v['title'] = mb_convert_encoding($v['title'],"UTF-8");
+
+            $sql = 'insert into pushInfo(title,`time`,`date`, detail, enable, expire) values("'.$v['title'].'","'.$v['time_stamp'].'","'.$v['date'].'","'.$v['link'].'",0,"'.$temp.'")';
+$dbn->query('set names utf8;'); 
             $dbn->exec($sql);
+            echo "yes";
         }catch(PDOException $e)
         {
             echo $sql . "<br>" . $e->getMessage();
