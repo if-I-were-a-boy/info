@@ -46,9 +46,14 @@ for($i=3;$i>=1;$i--) {
 }
  foreach ($sumInfo as $key => $value) {
     foreach ($value as $k => $v ){
-        $temp = $v['time_stamp'] + 20*24*60*60;
-        $sql = 'insert into pushInfo(title,`time`,`date`, detail, enable, expire) values("'.$v['title'].'","'.$v['time_stamp'].'","'.$v['date'].'","'.$v['link'].'","'.$temp.'")';
-        var_dump($sql);
+        try{$temp = $v['time_stamp'] + 20*24*60*60;
+            $sql = 'insert into pushInfo(title,`time`,`date`, detail, enable, expire) values("'.$v['title'].'","'.$v['time_stamp'].'","'.$v['date'].'","'.$v['link'].'","'.$temp.'")';
+            $dbn->exec($sql);
+        }catch(PDOException $e)
+        {
+            echo $sql . "<br>" . $e->getMessage();
+        }
+
     }
  }
 

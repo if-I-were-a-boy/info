@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00e10696-033a-4640-a502-9b32d6624401" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/mysql/pushInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/mysql/pushInfo.php" afterDir="false" />
-    </list>
+    <list default="true" id="00e10696-033a-4640-a502-9b32d6624401" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,8 +44,8 @@
       <file leaf-file-name="pushInfo.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mysql/pushInfo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="48" column="35" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
+            <state relative-caret-position="245">
+              <caret line="52" column="2" lean-forward="true" selection-start-line="52" selection-start-column="2" selection-end-line="52" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -193,12 +191,12 @@
       <workItem from="1525330833914" duration="1918000" />
       <workItem from="1525332787420" duration="10935000" />
       <workItem from="1525415265352" duration="6244000" />
-      <workItem from="1526009486986" duration="34001000" />
+      <workItem from="1526009486986" duration="34348000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53098000" />
+    <option name="totallyTimeSpent" value="53445000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -211,7 +209,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="33" width="1280" height="725" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32961783" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -263,13 +260,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/mysql/pushInfo.php</url>
-          <line>54</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="12" />
     </breakpoint-manager>
   </component>
@@ -454,8 +444,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mysql/pushInfo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="48" column="35" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
+        <state relative-caret-position="245">
+          <caret line="52" column="2" lean-forward="true" selection-start-line="52" selection-start-column="2" selection-end-line="52" selection-end-column="2" />
         </state>
       </provider>
     </entry>
