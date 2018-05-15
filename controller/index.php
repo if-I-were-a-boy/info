@@ -41,6 +41,7 @@ function showMessg(){
     return json_encode($data);
 }
 
-  showMessg();
+  $pushInfo = showMessg();
+  echo $pushInfo;
 ?>
 
