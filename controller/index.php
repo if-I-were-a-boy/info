@@ -17,7 +17,6 @@ function showMessg(){
     $rang = '.module-body';
     $allInfo = [];
     $flag = false;
-
     for($i=0;$i<=0;$i++) {
         //爬取符合条件的html
         if($flag){
@@ -37,15 +36,11 @@ function showMessg(){
         }
     }
 
-    return $allInfo;
+    $data = ['toal'=>count($allInfo), 'data'=>$allInfo];
+
+    return json_encode($data);
 }
 
-
-showMessg();
-
-
-
-//$contents=file_get_contents($url);
-//$contents = mb_convert_encoding($contents,'utf-8','gbk');
+  showMessg();
 ?>
 
