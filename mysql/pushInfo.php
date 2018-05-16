@@ -8,7 +8,6 @@
 require_once './mysql.php';
 require_once './../tool/opRedis.php';
 require_once './../tool/function.php';
-header("Content-type:text/html;charset=utf-8");
 ini_set('date.timezone','Asia/Shanghai');
 
 $dbn = (new MysqlDb())->connMysql();
@@ -45,12 +44,9 @@ for($i=3;$i>=1;$i--) {
  foreach ($sumInfo as $key => $value) {
     foreach ($value as $k => $v ){
         try{$temp = $v['time_stamp'] + 20*24*60*60;
- $dbn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-$v['title'] = mb_convert_encoding($v['title'],"UTF-8");
+            $dbn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $dbn->query("SET NAMES utf8");
             $sql = 'insert into pushInfo(title,`time`,`date`, detail, enable, expire) values("'.$v['title'].'","'.$v['time_stamp'].'","'.$v['date'].'","'.$v['link'].'",0,"'.$temp.'")';
-
             $dbn->exec($sql);
             echo "yes";
         }catch(PDOException $e)
