@@ -24,14 +24,10 @@ class opRedis{
     public function addList(){
       //存储数据到列表中
        $this->redis->lpush('list', 'html');
-       $redis->lpush('list', 'css');
-       $redis->lpush('list', 'php');
-       $redis->lpush('list', 'mysql');
-       $redis->lpush('list', 'javascript');
-       $redis->lpush('list', 'ajax');
+
 
         //获取列表中所有的值
-        $list = $redis->lrange('list', 0, -1);
+        $list =$this->redis->lrange('list', 0, -1);
         print_r($list);echo '<br>';
     }
 
