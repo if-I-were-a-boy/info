@@ -26,7 +26,7 @@ class MysqlDb{
         $dsn="$dbms:host=$host;dbname=$dbName";
 
         try {
-            $dbh = new PDO($dsn, $user, $pass, array(PDO::MYSQL_ATTR_INIT_COMMAND => "set names utf8")); //初始化一个PDO对象
+            $dbh = new PDO($dsn, $user, $pass, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8')); //初始化一个PDO对象
             return $dbh;
             /*你还可以进行一次搜索操作
             foreach ($dbh->query('SELECT * from FOO') as $row) {

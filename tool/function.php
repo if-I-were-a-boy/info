@@ -3,7 +3,7 @@ require_once "./../index.php";
 require_once SPIDER.'phpQuery/phpQuery.php';
 require_once SPIDER.'QueryList/QueryList.php';
 use QL\QueryList;
-
+header("Content-type:text/html;charset=utf-8");
 ini_set('date.timezone','Asia/Shanghai');
 
 function searchInfo($page, $rules, $rang){

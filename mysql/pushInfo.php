@@ -13,8 +13,6 @@ ini_set('date.timezone','Asia/Shanghai');
 
 $dbn = (new MysqlDb())->connMysql();
 
-
-
 //先导入一批数据进去
 $rules = array(
     'text' => array('.discuss-detail','html'),
@@ -50,9 +48,9 @@ for($i=3;$i>=1;$i--) {
  $dbn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 $v['title'] = mb_convert_encoding($v['title'],"UTF-8");
-
+            $dbn->query("SET NAMES utf8");
             $sql = 'insert into pushInfo(title,`time`,`date`, detail, enable, expire) values("'.$v['title'].'","'.$v['time_stamp'].'","'.$v['date'].'","'.$v['link'].'",0,"'.$temp.'")';
-$dbn->query('set names utf8;'); 
+
             $dbn->exec($sql);
             echo "yes";
         }catch(PDOException $e)
