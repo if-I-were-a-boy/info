@@ -5,6 +5,7 @@
  * Date: 2018/5/15
  * Time: 下午5:08
  */
+
 require_once './mysql.php';
 require_once './../tool/opRedis.php';
 require_once './../tool/function.php';
@@ -31,10 +32,10 @@ saveDb($res, $dbn, $nowTime);
 setMaxTime($dbn, $opRedis);
 
 function getMaxTimeFromDb($dbn){
-    $sql = "select max(time) from pushInfo where true";
-    $dbn->query("SET NAMES utf8");
+    $sql = "select max(time) from pushInfo";
     $result = $dbn->query($sql);
-    $maxTime = $result[0]['time'];
+    $row = $result->fetch();
+    $maxTime = $row['time'];
     return $maxTime;
 }
 
