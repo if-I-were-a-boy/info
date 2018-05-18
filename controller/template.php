@@ -27,7 +27,7 @@ function showTemplateHtml(){
     );
     $src1 = searchInfo($rules, $rang, $url);
     
-    $date = ['text' => $text[0]['text'], "src_o"  => $src, "src_t" => $src1];
+    $date = ['text' => $text[0]['text'], "src_o"  => $src[0]['src'], "src_t" => $src1[0]['src']];
     return json_encode($date);
 }
 echo showTemplateHtml();
