@@ -15,8 +15,15 @@ function showTemplateHtml(){
     $id = $_GET['id'];
     $rang = '.post-topic-main';
     $url ="https://www.nowcoder.com".$id;
-    $html = searchInfo($rules, $rang, $url); 
-    return $html;
+    $text = searchInfo($rules, $rang, $url);
+
+    $rules = array(
+        'src' => array('img','src'),
+    );
+    $rang = '.post-topic-des';
+    $src = searchInfo($rules, $rang, $url);
+    $date = ['text' => $text, $src => $src];
+    return json_encode($date);
 }
 echo showTemplateHtml();
 
