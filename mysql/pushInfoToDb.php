@@ -49,7 +49,10 @@ function doSpider($maxTime){
         if($flag) {
             break;
         }
-        $html = searchInfo($i,$rules, $rang);
+
+        $url="https://www.nowcoder.com/search?type=post&order=time&query=%E5%86%85%E6%8E%A8&page=".$i;
+
+        $html = searchInfo($rules, $rang, $url);
         $info = cutInfo($html);
         foreach ($info['par_o'][0] as $key => $value) {
             $perInfo =  getDetail($info['par_o'][0][$key], $info['par_t'][0][$key]);
