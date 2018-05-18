@@ -10,4 +10,4 @@ $sql = 'select * from pushInfo where date = "'.$date.'"';
 $result = $dbn->query($sql);
 $data = $result->fetchAll();
 
-return json_encode($date);
+echo json_encode($date);
