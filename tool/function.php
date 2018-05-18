@@ -10,8 +10,8 @@ function searchInfo($rules, $rang, $url){
 
     //开始采集
     $data = QueryList::Query($url,$rules,$rang)->data;
+    return $data;
 
-    return $data[0]['text'];
 }
 
 function cutInfo($html){
