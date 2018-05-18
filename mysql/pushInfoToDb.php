@@ -20,16 +20,15 @@ $maxTime = getMaxTimeFromDb($dbn);
 $res = doSpider($maxTime);
 
 //存储数据(2小时一次 )
-if(!empty($res)){
+if(!empty($res[0])){
     saveDb($res, $dbn, $nowTime);
 }
-
 
 function getMaxTimeFromDb($dbn){
     $sql = "select max(time) from pushInfo";
     $result = $dbn->query($sql);
     $row = $result->fetch();
-    $maxTime = $row['time'];
+    $maxTime = $row[0];
     return $maxTime;
 }
 
@@ -54,7 +53,7 @@ function doSpider($maxTime){
         $info = cutInfo($html);
         foreach ($info['par_o'][0] as $key => $value) {
             $perInfo =  getDetail($info['par_o'][0][$key], $info['par_t'][0][$key]);
-            if($perInfo['time_stamp'] < $maxTime) {
+            if($perInfo['time_stamp'] <= $maxTime) {
                 $flag = true;
                 break;
             }

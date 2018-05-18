@@ -37,7 +37,6 @@ function showMessg(){
     }
 
     $data = ['toal'=>count($allInfo), 'info'=>$allInfo];
-
     return json_encode($data);
 }
 
