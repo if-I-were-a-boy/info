@@ -10,14 +10,14 @@ require_once TOOL.'function.php';
 
 function showTemplateHtml(){
     $rules = array(
-        'text' => array('.post-topic-des','html'),
+        'text' => array('.post-topic-des','text'),
     );
     $id = $_GET['id'];
     $rang = '.post-topic-main';
-    $url ="https://www.nowcoder.com/discuss/".$id;
-    $html = searchInfo($rules, $rang, $url);
+    $url ="https://www.nowcoder.com".$id;
+    $html = searchInfo($rules, $rang, $url); 
+    return $html;
 }
-
-echo  $html;
+echo showTemplateHtml();
 
 
