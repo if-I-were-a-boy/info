@@ -4,3 +4,4 @@ define("NEWS",WEBROOT."/news/");
 define("CONTROLLER",WEBROOT."/controller/");
 define("TOOL",WEBROOT."/tool/");
 define("SPIDER",WEBROOT."/spider/");
+ini_set('date.timezone','Asia/Shanghai');
