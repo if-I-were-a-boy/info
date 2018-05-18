@@ -16,15 +16,18 @@ function showTemplateHtml(){
     $rang = '.post-topic-main';
     $url ="https://www.nowcoder.com".$id;
     $text = searchInfo($rules, $rang, $url);
-
+    
     $rules = array(
-        'src' => array('img','src'),
+        'img' => array("img:even",'src'),
     );
-    $rang = '.post-topic-des';
     $src = searchInfo($rules, $rang, $url);
-    $date = ['text' => $text, $src => $src];
+    
+    $rules = array(
+        'img' => array("img:odd",'src'),
+    );
+    $src1 = searchInfo($rules, $rang, $url);
+    
+    $date = ['text' => $text[0]['text'], "src_o"  => $src, "src_t" => $src1];
     return json_encode($date);
 }
 echo showTemplateHtml();
-
-
