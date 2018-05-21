@@ -6,8 +6,7 @@ require_once "./../mysql/mysql.php";
 
 $dbn = (new MysqlDb())->connMysql();
 $date = date("Y-m-d");
-$date = "2018-05-08";
-$sql = 'select * from pushInfo where date = "'.$date.'"';
+$sql = 'select * from pushInfo where date = "'.$date.'" order by id desc';
 $result = $dbn->query($sql);
 $data = $result->fetchAll();
 
