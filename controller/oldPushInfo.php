@@ -12,9 +12,8 @@ require_once "./../mysql/mysql.php";
 
 $dbn = (new MysqlDb())->connMysql();
 $start = strtotime($_GET['start']);
-$end = strtotime($_GET['start']);
-
-$sql = 'select * from pushInfo where time >= "'.$start.'" and  time <= "'.$end.' order by id desc';
+$end = strtotime($_GET['end'])+86400;
+$sql = "select * from pushInfo where time >= $start and  time <= $end  order by id desc";
 $result = $dbn->query($sql);
 $data = $result->fetchAll();
 
