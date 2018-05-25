@@ -60,7 +60,7 @@ function doSpider($maxTime){
                 $flag = true;
                 break;
             }
-            if(isset($perInfo["type"]) && $perInfo["type"]){
+            if(isset($perInfo["type"]) && $perInfo["type"]==1){
                 $allInfo[] = $perInfo;
             }
         }

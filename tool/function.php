@@ -47,7 +47,14 @@ function getDetail($html_o, $html_t){
 
     //开始采集
     $data = QueryList::Query($html_t,$rules)->data;
-    $type  = ($data[0]['type'] == '[招聘信息]') ? 1 : 0;
+    if($data[0]['type'] == '[招聘信息]'){
+      $type  = 1;
+    }else if($data[0]['type'] == '[笔经面经]'){
+      $type = 2;
+    }else{
+      $type = 0;
+    }
+   //$type  = ($data[0]['type'] == '[招聘信息]') ? 1 : 0;
     $time =  getTime($data[0]['time']);
     $info = ['title' => $title, 'link' => $link, 'type' => $type, 'time' => $time['time'], 'date'=> $time['date'], 'time_stamp'=>$time['time_stamp']];
     return $info;
