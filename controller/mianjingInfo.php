@@ -11,7 +11,7 @@ require_once "./../mysql/mysql.php";
 
 $id = $_GET['id'];
 $dbn = (new MysqlDb())->connMysql();
-$sql = 'select * from experInfo where company = "'.$id.'" order by time desc limit 20';
+$sql = 'select * from experInfo where company = "'.$id.'" order by time desc';
 $result = $dbn->query($sql);
 $data = $result->fetchAll();
 
