@@ -11,14 +11,13 @@ ini_set('date.timezone','Asia/Shanghai');
 
 //初始化数据
 $dbn = (new MysqlDb())->connMysql();
-$nowTime = date("Y-m-d H:i:s");
+//$nowTime = date("Y-m-d H:i:s");
 
 //获取最大时间
-$maxTime = getMaxTimeFromDb($dbn);
-
+//$maxTime = getMaxTimeFromDb($dbn);
+$maxTime = strtotime("2018-01-01 00:00:00");
 //爬取数据
 $res = doSpider($maxTime);
-
 //存储数据(2小时一次 )
 if(!empty($res[0])){
     saveDb($res, $dbn, $nowTime);
@@ -43,26 +42,26 @@ function doSpider($maxTime){
     $flag = false;
     $sumInfo = [];
 
-    for($i=1;$i<=250;$i++) {
+    for($i=1;$i<=3;$i++) {
         //爬取符合条件的html
         $allInfo = [];
-        if($flag) {
-            break;
-        }
-
-        $url="https://www.nowcoder.com/discuss/community/134?type=2&order=0&page=".$i;
+        //if($flag) {
+           //break;
+        //}
+        $url="https://www.nowcoder.com/discuss/community/138?type=2&order=0&page=".$i;
 
         $html = searchInfo($rules, $rang, $url);
         $info = cutInfo($html[0]['text']);
         foreach ($info['par_o'][0] as $key => $value) {
             $perInfo =  getDetail($info['par_o'][0][$key], $info['par_t'][0][$key]);
-            if($perInfo['time_stamp'] <= $maxTime) {
-                $flag = true;
-                break;
-            }
+            if($perInfo['time_stamp'] >= $maxTime) {
+               // $flag = true;
+               // break;
+            //}
             if(isset($perInfo["type"]) && $perInfo["type"]==2){
                 $allInfo[] = $perInfo;
             }
+         }
         }
 
         $sumInfo[] = array_reverse($allInfo);
@@ -80,7 +79,7 @@ function saveDb($res, $dbn, $nowTime){
                 $temp = $v['time_stamp'] + 20*24*60*60;
                 $dbn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 $dbn->query("SET NAMES utf8");
-                $sql = 'insert into experInfo(title,`time`,`date`, detail, enable, expire) values("'.$v['title'].'","'.$v['time_stamp'].'","'.$v['date'].'","'.$v['link'].'",0,"'.$temp.'")';
+                $sql = 'insert into experInfo(title,`time`,`date`, detail, enable, expire, company) values("'.$v['title'].'","'.$v['time_stamp'].'","'.$v['date'].'","'.$v['link'].'",0,"'.$temp.'", "tengxun")';
                 $dbn->exec($sql);
                 $content = '['.$nowTime.']      '.$sql.'     success';
                 file_put_contents('access-log.txt', $content,FILE_APPEND);
