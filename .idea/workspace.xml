@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00e10696-033a-4640-a502-9b32d6624401" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/controller/mianjingInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/mianjingInfo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/books.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,11 +16,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mianjingInfo.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mianjingInfo.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/mianjingInfo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="13" column="76" selection-start-line="13" selection-start-column="76" selection-end-line="13" selection-end-column="76" />
+            <state relative-caret-position="360">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="books.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controller/books.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -84,6 +93,7 @@
         <option value="$PROJECT_DIR$/mysql/pushInfoToDb.php" />
         <option value="$PROJECT_DIR$/mysql/experInfoToDb.php" />
         <option value="$PROJECT_DIR$/controller/mianjingInfo.php" />
+        <option value="$PROJECT_DIR$/controller/books.php" />
       </list>
     </option>
   </component>
@@ -177,7 +187,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73356000" />
+    <option name="totallyTimeSpent" value="74006000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -197,8 +207,8 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32961783" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.4410828" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.315832" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.4410828" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.315832" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -259,13 +269,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/curl/curl_d.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="64" column="9" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spider/QueryList/QueryList.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="795">
@@ -581,8 +584,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/mianjingInfo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="13" column="76" selection-start-line="13" selection-start-column="76" selection-end-line="13" selection-end-column="76" />
+        <state relative-caret-position="360">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/books.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
