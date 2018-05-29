@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00e10696-033a-4640-a502-9b32d6624401" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/controller/books.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/books.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/books.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,8 +28,8 @@
       <file leaf-file-name="books.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controller/books.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="105">
+              <caret line="7" column="202" selection-start-line="7" selection-start-column="202" selection-end-line="7" selection-end-column="202" />
             </state>
           </provider>
         </entry>
@@ -187,7 +187,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74006000" />
+    <option name="totallyTimeSpent" value="74307000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -207,8 +207,8 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32961783" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.4410828" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.315832" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.4410828" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.315832" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -591,8 +591,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/books.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="105">
+          <caret line="7" column="202" selection-start-line="7" selection-start-column="202" selection-end-line="7" selection-end-column="202" />
         </state>
       </provider>
     </entry>
