@@ -11,14 +11,15 @@ require_once "./../mysql/mysql.php";
 
 $id = $_GET['id'];
 $pageNumber = $_GET['pageNumber'];
+$inputVal = empty($_GET['inputVal']) ? '' : $_GET['inputVal'];
 $start = ($pageNumber-1)*10;
 
 $dbn = (new MysqlDb())->connMysql();
-$sql = 'select * from experInfo where company = "'.$id.'" order by time desc limit '.$start.',10';
+$sql = 'select * from experInfo where company = "'.$id.'" and title like "%'.$inputVal.'%" order by time desc limit '.$start.',10';
 $result = $dbn->query($sql);
 $data = $result->fetchAll();
 if($pageNumber == 1){
-$sql = 'select count(*) from experInfo where company = "'.$id.'" order by time desc';
+$sql = 'select count(*) from experInfo where company = "'.$id.'"  and title like %'.$inputVal.'%  order by time desc';
 $result = $dbn->query($sql);
 $info = $result->fetch();
 $pageSize = ceil($info[0]/10);

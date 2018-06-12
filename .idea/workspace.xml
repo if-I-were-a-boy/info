@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00e10696-033a-4640-a502-9b32d6624401" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/controller/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/mianjingInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/mianjingInfo.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,20 +36,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+            <state relative-caret-position="45">
+              <caret line="8" selection-start-line="8" selection-end-line="22" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="newPushInfo.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/newPushInfo.php">
+      <file leaf-file-name="search.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controller/search.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="22" />
+            <state relative-caret-position="196">
+              <caret line="17" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -55,8 +57,8 @@
       <file leaf-file-name="mianjingInfo.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/mianjingInfo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="22" selection-start-line="22" selection-end-line="22" selection-end-column="25" />
+            <state relative-caret-position="259">
+              <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -100,11 +102,12 @@
         <option value="$PROJECT_DIR$/tool/function.php" />
         <option value="$PROJECT_DIR$/mysql/pushInfoToDb.php" />
         <option value="$PROJECT_DIR$/mysql/experInfoToDb.php" />
-        <option value="$PROJECT_DIR$/controller/mianjingInfo.php" />
         <option value="$PROJECT_DIR$/controller/books.php" />
         <option value="$PROJECT_DIR$/sql.php" />
         <option value="$PROJECT_DIR$/controller/register.php" />
         <option value="$PROJECT_DIR$/controller/login.php" />
+        <option value="$PROJECT_DIR$/controller/search.php" />
+        <option value="$PROJECT_DIR$/controller/mianjingInfo.php" />
       </list>
     </option>
   </component>
@@ -138,33 +141,6 @@
               <item name="info" type="b2602c69:ProjectViewProjectNode" />
               <item name="info" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="controller" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="info" type="b2602c69:ProjectViewProjectNode" />
-              <item name="info" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="mysql" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="info" type="b2602c69:ProjectViewProjectNode" />
-              <item name="info" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="spider" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="info" type="b2602c69:ProjectViewProjectNode" />
-              <item name="info" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="spider" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="phpQuery" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="info" type="b2602c69:ProjectViewProjectNode" />
-              <item name="info" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="spider" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="QueryList" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="info" type="b2602c69:ProjectViewProjectNode" />
-              <item name="info" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="tool" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="info" type="b2602c69:ProjectViewProjectNode" />
@@ -219,12 +195,12 @@
       <workItem from="1527687892610" duration="1037000" />
       <workItem from="1527835147650" duration="4871000" />
       <workItem from="1528041293283" duration="4286000" />
-      <workItem from="1528785957749" duration="3495000" />
+      <workItem from="1528785957749" duration="5794000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91661000" />
+    <option name="totallyTimeSpent" value="93960000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -237,6 +213,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="725" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33037156" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32961783" />
@@ -292,13 +269,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/basic.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="144" column="9" selection-start-line="144" selection-start-column="9" selection-end-line="144" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tool/opRedis.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
@@ -577,13 +547,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/mianjingInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="22" selection-start-line="22" selection-end-line="22" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mysql/pushInfoToDb.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
@@ -598,13 +561,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/newPushInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controller/register.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
@@ -614,8 +570,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+        <state relative-caret-position="45">
+          <caret line="8" selection-start-line="8" selection-end-line="22" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/newPushInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/mianjingInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="17" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
         </state>
       </provider>
     </entry>
