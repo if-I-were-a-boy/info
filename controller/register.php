@@ -9,6 +9,9 @@
 require_once "./../index.php";
 require_once "./../mysql/mysql.php";
 
+$date = date("Y-m-d");
+$time = time();
+
 $username = $_POST['username'];
 $password = $_POST['password'];
 
@@ -24,7 +27,7 @@ $data = [];
 if(empty($info)) {
     //插入数据库
     $password = md5($password);
-    $sql = 'insert into userInfo(tel,`pass`) values("'.$username.'","'.$password.'")';
+    $sql = 'insert into userInfo(tel,`pass`, `date`, `time`) values("'.$username.'","'.$password.'","'.$date.'","'.$time.'")';
     $dbn->exec($sql);
     $data = ['flag' => 'yes'];
 }else{
