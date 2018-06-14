@@ -24,3 +24,50 @@ while($row = $res->fetch()){
  // $redis->hset($s,'title',$row['title']);
 }
          $redis -> expire("pustInfo",3600*24);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function getDetail($html_o, $html_t){
+
+    //获取title和link
+    $rules = array(
+        'title' => array('a:first', 'text'),
+        'link'  => array('a:first', 'href')
+    );
+
+    //开始采集
+    $data = QueryList::Query($html_o,$rules)->data;
+    $title = $data[0]['title'];
+    $link = $data[0]['link'];
+    //获取time和type
+    $rules = array(
+        'type'  => array('a:odd', 'text'),
+        'time'  => array('.feed-tip', 'text')
+    );
+    //开始采集
+    $data = QueryList::Query($html_t,$rules)->data;
+    if($data[0]['type'] == '[招聘信息]'){
+        $type  = 1;
+    }else if($data[0]['type'] == '[笔经面经]'){
+        $type = 2;
+    }else{
+        $type = 0;
+    }
+    //$type  = ($data[0]['type'] == '[招聘信息]') ? 1 : 0;
+    $time =  getTime($data[0]['time']);
+    $info = ['title' => $title, 'link' => $link, 'type' => $type,       'time' => $time['time'], 'date'=> $time['date'], 'time_stamp'=>$time['time_stamp']];
+    return $info;
+
+}
