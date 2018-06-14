@@ -19,7 +19,7 @@ $sql = 'select * from experInfo where company = "'.$id.'" and title like "%'.$in
 $result = $dbn->query($sql);
 $data = $result->fetchAll();
 if($pageNumber == 1){
-$sql = 'select count(*) from experInfo where company = "'.$id.'"  and title like %'.$inputVal.'%  order by time desc';
+$sql = 'select count(*) from experInfo where company = "'.$id.'"  and title like "%'.$inputVal.'%"  order by time desc';
 $result = $dbn->query($sql);
 $info = $result->fetch();
 $pageSize = ceil($info[0]/10);
