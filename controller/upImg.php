@@ -64,7 +64,8 @@ if(!empty($uplad_name))
 //            if(in_array($_FILES['imgfile']["type"][$i], $uptypes))
 //            {
     $uptype = explode(".",$uplad_name);
-    $newname = $date."-0".".".$uptype[1];
+    $l=count($uptype);
+    $newname = $date."-0".".".$uptype[$l-1];
     //echo($newname);
     $uplad_name= $newname;
     //如果上传的文件没有在服务器上存在
@@ -72,13 +73,13 @@ if(!empty($uplad_name))
     {
         //把图片文件从临时文件夹中转移到我们指定上传的目录中
         $file=$img_dir.$uplad_name;
-        move_uploaded_file($uplad_tmp_name,$file);
+       $tmp= move_uploaded_file($uplad_tmp_name,$file);
         chmod($file,0644);
         $img_url1=$img_url.$newname;
         $uploaded++;
         // 存入数据库中
 
-        Response::json(1,'success',$img_url1);
+        Response::json($uplad_tmp_name,'success',$img_url1);
     }
 
 
